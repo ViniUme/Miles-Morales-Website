@@ -1,0 +1,28 @@
+$red: #EC111A;
+$white: #F9F9F9;
+$dark: #1D1D1D;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container video{
+    position: fixed;
+    filter: contrast(2);
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 80%, rgba(0,0,0,1) 100%);
+}
