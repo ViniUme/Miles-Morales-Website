@@ -1,6 +1,6 @@
 $red: #EC111A;
-$white: #F9F9F9;
-$gray: #dadada;
+$white: #ffffff;
+$gray: #b9b9b9;
 $dark: #18181a;
 
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
@@ -29,54 +29,104 @@ $dark: #18181a;
     background: linear-gradient(120deg, $dark 0%, $dark 20%, #18181aC7 50%, $dark 80%, $dark 100%);
     color: $gray;
 }
-header nav{
+#nav{
     display: flex;
     width: 100%;
-    height: 120px;
+    height: 90px;
     justify-content: space-around;
     align-items: center;
+    background-color: $dark;
 }
 .spider{
-    margin-left: 20px;
+    margin: 20px;
+    transition: filter 250ms ease;
 }
-.link-pages ul{
-    margin-left: 30px;
+.spider:hover{
+    filter: drop-shadow( 0 0 10px red);
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list{
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
-.link-pages ul li{
+.list li{
     font-family: 'Sora', sans-serif;
     text-transform: uppercase;
     font-size: 0.8em;
-    margin: 0 20px;
+    margin: 0 10px;
     letter-spacing: 0.2em;
     cursor: pointer;
-    padding: .5rem;
+    padding: .5em .2em;
+    transition: color 250ms ease;
 }
+.list li:hover{
+    color: $white;
+    filter: drop-shadow( 0 0 5px red);
+}
+
 
 .social{
     width: 100%;
-    margin-right: 30px;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-around;
     width: 300px;
     list-style: none;
 }
 .social img{
     cursor: pointer;
     height: 40px;
-    padding: .5rem;
+    padding: .4rem;
+    transition: all 200ms ease;
+}
+.social img:hover{
+    height: 60px;
+    filter: drop-shadow( 0 0 5px red);
 }
 
 #mobile-menu{
     display: none;
 }
 
-@media (max-width: 900px){
-    .link-pages , .social{
-        display: none;
+@media (max-width: 870px){
+    .link-pages{
+        position: absolute;
+        width: 100%;
+        height: 0;
+        margin: auto;
+        top: 90px;
+        background-color: $dark;
+        z-index: 1000;
+        transition: 600ms;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .list{
+        flex-direction: column;
+        font-size: 1em;
+        margin: 20px 0;
+        width: 100%;
+    }
+    .list li{
+        padding: 10px;
+        margin: 20px;
+        text-align: center;
+    }
+
+
+
+    .social{
+        justify-content: space-between;
+        margin: 0 20px;
     }
     #mobile-menu{
         display: block;
@@ -86,6 +136,7 @@ header nav{
     .hamburger-menu{
         width: 32px;
         border-top: $white 2px solid;
+        transition: 200ms;
     }
     .hamburger-menu::after , .hamburger-menu::before{
         content: '';
@@ -94,9 +145,23 @@ header nav{
         height: 2px;
         background-color: $white;
         margin-top: 10px;
+        transition: 400ms;
+        position: relative;
+    }
+    #nav.active .link-pages{
+        visibility: visible;
+        height: calc(100% - 90px);
+        align-items: start;
     }
 
-    #nav.active > .link-pages , .social{
-        display: flex;
+    #nav.active .hamburger-menu{
+        border-top-color: transparent;
+    }
+    #nav.active .hamburger-menu::after{
+        transform: rotate(135deg);
+        top: -12px;
+    }
+    #nav.active .hamburger-menu::before{
+        transform: rotate(-135deg);
     }
 }
