@@ -1,6 +1,7 @@
 $red: #EC111A;
 $white: #F9F9F9;
-$dark: #1D1D1D;
+$gray: #dadada;
+$dark: #18181a;
 
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
@@ -18,11 +19,84 @@ $dark: #1D1D1D;
 }
 .container video{
     position: fixed;
-    filter: contrast(2);
+    height: 100vh;
+    height: 100%;
 }
 .content{
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 80%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(120deg, $dark 0%, $dark 20%, #18181aC7 50%, $dark 80%, $dark 100%);
+    color: $gray;
+}
+header nav{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    justify-content: space-around;
+    align-items: center;
+}
+.spider{
+    margin-left: 20px;
+}
+.link-pages ul{
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.link-pages ul li{
+    font-family: 'Sora', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin: 0 20px;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.social{
+    width: 100%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    list-style: none;
+}
+.social img{
+    cursor: pointer;
+    height: 40px;
+    padding: .5rem;
+}
+
+#mobile-menu{
+    display: none;
+}
+
+@media (max-width: 900px){
+    .link-pages , .social{
+        display: none;
+    }
+    #mobile-menu{
+        display: block;
+        cursor: pointer;
+        padding: .5em;
+    }
+    .hamburger-menu{
+        width: 32px;
+        border-top: $white 2px solid;
+    }
+    .hamburger-menu::after , .hamburger-menu::before{
+        content: '';
+        display: block;
+        width: 32px;
+        height: 2px;
+        background-color: $white;
+        margin-top: 10px;
+    }
+
+    #nav.active > .link-pages , .social{
+        display: flex;
+    }
 }

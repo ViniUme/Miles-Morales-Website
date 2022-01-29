@@ -22,15 +22,107 @@
 
 .container video {
   position: fixed;
-  -webkit-filter: contrast(2);
-          filter: contrast(2);
+  height: 100vh;
+  height: 100%;
 }
 
 .content {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, rgba(0, 0, 0, 0.9)), color-stop(50%, rgba(0, 0, 0, 0.5)), color-stop(80%, rgba(0, 0, 0, 0.9)), to(black));
-  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 80%, black 100%);
+  background: linear-gradient(120deg, #18181a 0%, #18181a 20%, #18181aC7 50%, #18181a 80%, #18181a 100%);
+  color: #dadada;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 120px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.spider {
+  margin-left: 20px;
+}
+
+.link-pages ul {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.link-pages ul li {
+  font-family: 'Sora', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin: 0 20px;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  padding: .5rem;
+}
+
+.social {
+  width: 100%;
+  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 300px;
+  list-style: none;
+}
+
+.social img {
+  cursor: pointer;
+  height: 40px;
+  padding: .5rem;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .link-pages, .social {
+    display: none;
+  }
+  #mobile-menu {
+    display: block;
+    cursor: pointer;
+    padding: .5em;
+  }
+  .hamburger-menu {
+    width: 32px;
+    border-top: #F9F9F9 2px solid;
+  }
+  .hamburger-menu::after, .hamburger-menu::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #F9F9F9;
+    margin-top: 10px;
+  }
+  #nav.active > .link-pages, .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */
