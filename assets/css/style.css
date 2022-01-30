@@ -142,6 +142,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
 }
 
@@ -183,7 +186,7 @@
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  height: 350%;
+  height: 60px;
   margin: 0 5px;
   padding: 0 10px;
   -webkit-transform: skewX(-20deg);
@@ -229,6 +232,9 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .miles {
     position: relative;

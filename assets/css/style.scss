@@ -100,6 +100,7 @@ $dark: #18181a;
     height: calc(100% - 90px);
     display: flex;
     justify-content: start;
+    align-items: flex-start;
     position: relative;
 }
 .miles{
@@ -125,7 +126,7 @@ $dark: #18181a;
 }
 .btn{
     width: min-content;
-    height: 350%;
+    height: 60px;
     margin: 0 5px;
     padding: 0 10px;
     transform: skewX(-20deg);
@@ -159,6 +160,7 @@ $dark: #18181a;
 @media (max-width: 999px){
     .middle{
         flex-direction: column-reverse;
+        align-items: center;
     }
     .miles{
         position: relative;
