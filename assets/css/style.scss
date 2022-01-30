@@ -37,7 +37,7 @@ $dark: #18181a;
     align-items: center;
 }
 .spider{
-    margin: 20px;
+    margin: 0 20px;
     transition: filter 250ms ease;
 }
 .spider:hover{
@@ -216,6 +216,7 @@ $dark: #18181a;
         display: block;
         cursor: pointer;
         padding: .5em;
+        margin: 0 12px;
     }
     .hamburger-menu{
         width: 32px;

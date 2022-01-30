@@ -48,7 +48,7 @@
 }
 
 .spider {
-  margin: 20px;
+  margin: 0 20px;
   -webkit-transition: -webkit-filter 250ms ease;
   transition: -webkit-filter 250ms ease;
   transition: filter 250ms ease;
@@ -297,6 +297,7 @@
     display: block;
     cursor: pointer;
     padding: .5em;
+    margin: 0 12px;
   }
   .hamburger-menu {
     width: 32px;
