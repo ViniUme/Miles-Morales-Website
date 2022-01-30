@@ -1,4 +1,4 @@
-$red: #EC111A;
+$red: #e70911;
 $white: #ffffff;
 $gray: #b9b9b9;
 $dark: #18181a;
@@ -103,12 +103,12 @@ $dark: #18181a;
     position: relative;
 }
 .miles{
-    width: 55%;
+    width: 50%;
     position: absolute;
-    right: 0;
+    left: 500px;
 }
 .separator{
-    margin: 50px;
+    margin: 50px 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -120,15 +120,59 @@ $dark: #18181a;
 .buttons{
     margin: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
 }
 .btn{
-    width: 200px;
-    height: 70px;
-    margin: 0 30px;
+    width: min-content;
+    height: 350%;
+    margin: 0 5px;
+    padding: 0 10px;
+    transform: skewX(-20deg);
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: .7em;
+    letter-spacing: .13em;
+    z-index: 2;
+    cursor: pointer;
+    transition: .6s;
 }
-
+.btn:hover{
+    transform: none;
+}
+.pre-order{
+    background-color: $red;
+    color: $white;
+    border: $red 2px solid;
+}
+.pre-order:hover{
+    border: $white 2px solid;
+}
+.teaser{
+    background: none;
+    border: 2px $red solid;
+    color: $white;
+}
+.teaser:hover{
+    background-color: $dark;
+}
+@media (max-width: 999px){
+    .middle{
+        flex-direction: column-reverse;
+    }
+    .miles{
+        position: relative;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: -20px;
+        left: 0;
+        right: 0;
+        width: 60%;
+    }
+    .separator{
+        margin: 30px;
+    }
+}
 @media (max-width: 870px){
     .link-pages{
         position: absolute;
@@ -153,6 +197,10 @@ $dark: #18181a;
         padding: 10px;
         margin: 20px;
         text-align: center;
+    }
+
+    .separator img{
+        width: 90%;
     }
 
 
