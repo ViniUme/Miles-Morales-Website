@@ -45,7 +45,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #18181a;
 }
 
 .spider {
@@ -100,8 +99,6 @@
 
 .list li:hover {
   color: #ffffff;
-  -webkit-filter: drop-shadow(0 0 5px red);
-          filter: drop-shadow(0 0 5px red);
 }
 
 .social {
@@ -134,19 +131,73 @@
 
 #mobile-menu {
   display: none;
+  z-index: 2000;
+}
+
+.middle {
+  height: calc(100% - 90px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+}
+
+.miles {
+  width: 55%;
+  position: absolute;
+  right: 0;
+}
+
+.separator {
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.separator img {
+  width: 550px;
+}
+
+.buttons {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  width: 200px;
+  height: 70px;
+  margin: 0 30px;
 }
 
 @media (max-width: 870px) {
   .link-pages {
     position: absolute;
-    width: 100%;
-    height: 0;
+    width: 0;
+    height: 100%;
     margin: auto;
-    top: 90px;
+    top: 0;
+    right: 0;
     background-color: #18181a;
     z-index: 1000;
-    -webkit-transition: 600ms;
-    transition: 600ms;
+    -webkit-transition: 700ms;
+    transition: 700ms;
     visibility: hidden;
     overflow-y: hidden;
   }
@@ -194,7 +245,7 @@
   }
   #nav.active .link-pages {
     visibility: visible;
-    height: calc(100% - 90px);
+    width: 100%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;

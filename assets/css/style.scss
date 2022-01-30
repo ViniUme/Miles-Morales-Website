@@ -35,7 +35,6 @@ $dark: #18181a;
     height: 90px;
     justify-content: space-around;
     align-items: center;
-    background-color: $dark;
 }
 .spider{
     margin: 20px;
@@ -70,7 +69,6 @@ $dark: #18181a;
 }
 .list li:hover{
     color: $white;
-    filter: drop-shadow( 0 0 5px red);
 }
 
 
@@ -95,18 +93,53 @@ $dark: #18181a;
 
 #mobile-menu{
     display: none;
+    z-index: 2000;
+}
+
+.middle{
+    height: calc(100% - 90px);
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+.miles{
+    width: 55%;
+    position: absolute;
+    right: 0;
+}
+.separator{
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.separator img{
+    width: 550px;
+}
+
+.buttons{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.btn{
+    width: 200px;
+    height: 70px;
+    margin: 0 30px;
 }
 
 @media (max-width: 870px){
     .link-pages{
         position: absolute;
-        width: 100%;
-        height: 0;
+        width: 0;
+        height: 100%;
         margin: auto;
-        top: 90px;
+        top: 0;
+        right: 0;
         background-color: $dark;
         z-index: 1000;
-        transition: 600ms;
+        transition: 700ms;
         visibility: hidden;
         overflow-y: hidden;
     }
@@ -150,7 +183,7 @@ $dark: #18181a;
     }
     #nav.active .link-pages{
         visibility: visible;
-        height: calc(100% - 90px);
+        width: 100%;
         align-items: start;
     }
 
